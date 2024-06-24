@@ -1,0 +1,99 @@
+.sideBar {
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  background: black;
+  color: var(--text-color);
+  width: 230px;
+  transition: transform 0.3s ease;
+  /* transform: translateX(-100%); */
+}
+
+ .active{
+  color: #06d688;
+}
+
+.sideBar.hidden {
+  transform: translateX(-100%);
+}
+
+.css-18unl23,
+.css-dip3t8 {
+  background-color: black !important;
+}
+
+.css-1t8x7v1 > .ps-menu-button:hover {
+  background-color: unset !important;
+}
+
+.nav-links ul li:hover {
+  background-color: black !important;
+  color: #06d688;
+}
+
+.logo {
+  padding-top: 5rem;
+}
+
+.logo .logoPart {
+  color: #06d688;
+}
+
+.css-1wvake5 {
+  min-width: unset !important;
+  width: unset !important;
+}
+
+.ps-collapsed {
+  width: 92px;
+}
+
+.ps-sidebar-container {
+  width: 100%;
+}
+
+.nav-links {
+  margin: auto 0;
+  display: block;
+  margin-top: 50%;
+}
+
+@media screen and (max-width: 640px) {
+  .toggleClass {
+    position: fixed;
+    z-index: 1000;
+  }
+}
+
+.toggle-button {
+  display: none; /* Initially hidden on larger screens */
+  position: fixed;
+  top: 10px; /* Adjust as necessary */
+  left: 10px; /* Adjust as necessary */
+  z-index: 1001; /* Higher than the sidebar */
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.5rem;
+  width: fit-content !important;
+  height: fit-content !important;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+  .toggle-button {
+    display: block; /* Show only on small devices */
+  }
+
+  .sideBar {
+    transform: translateX(0); /* Sidebar visible by default */
+    z-index: 1000;
+  }
+}
+
+@media (min-width: 769px) {
+  .sideBar.hidden {
+    display: unset;
+    transform: unset;
+  }
+}
